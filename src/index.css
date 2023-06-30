@@ -1,8 +1,7 @@
 body {
   height: 100%;
   width: 100%;
-  margin: 0 0 100px 0 ;
-  padding: 0;
+  margin: 0;
   overflow-x: hidden;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -23,8 +22,11 @@ code {
   cursor: pointer;
 }
 
-h1 , h3{
+h1 ,h2, h3{
   text-align: center;
+  margin: 0;
+  padding: 30px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 nav{
@@ -50,13 +52,10 @@ a:hover{
 } 
 
 footer {
-  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 20px;
-  background: linear-gradient(to top, rgba(255, 255, 255, 1), transparent);
-  color: #ffffff;
+  padding: 50px 0;
   text-align: center;
 }
 
@@ -85,7 +84,7 @@ form{
   justify-content: center;
   align-items: center;
   width: 300px;
-  height: 400px;
+  height: 500px;
   border-radius: 10px;
   background-color: #ffffff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -96,12 +95,17 @@ form{
   transform: translateY(-5px);
 }
 
-.card img {
+.card-img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 20px;
+}
+
+.card-header{
+  display: flex;
+  align-items: center;
 }
 
 .card h3 {
@@ -115,25 +119,22 @@ form{
   margin-bottom: 20px;
 }
 
-.card button {
-  background-color: #ffffff;
+.card-button {
+  display: flex;
   border: none;
-  color: #888888;
-  font-size: 16px;
   cursor: pointer;
   transition: color 0.3s ease-in-out;
-}
-
-.card button:hover {
-  color: #333333;
+  width: 25px;
+  height: 25px;
 }
 
 .card-grid{
   display: flex;
   justify-content: space-evenly;
-  gap: 1rem;
+  padding: 40px 0;
+  gap: 2rem;
   width: 90vw;
-  height: auto;
+  height: fit-content;
   flex-wrap: wrap;
   margin: 0 auto;
 }
@@ -170,8 +171,7 @@ tr:nth-child(even) {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #f2f2f2;
-  padding: 10px;
+  padding: 10px 0;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -180,6 +180,8 @@ tr:nth-child(even) {
 .navbar > ul {
   list-style-type: none;
   display: flex;
+  justify-content: space-between;
+  padding: 0;
   gap: 20px;
 }
 
@@ -195,6 +197,11 @@ tr:nth-child(even) {
 
 .navbar > a:hover {
   color: #666;
+}
+
+.route{
+  min-height: 90vh;
+  max-height: fit-content;
 }
 
 .theme-button {
@@ -216,14 +223,12 @@ tr:nth-child(even) {
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 100vh;
 }
 
 .contact-form {
   width: 500px;
   height: 400px;
   padding: 40px;
-  background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -231,7 +236,6 @@ tr:nth-child(even) {
 .contact-form h2 {
   font-size: 24px;
   margin-bottom: 20px;
-  color: #333333;
 }
 
 .contact-form input[type="text"],

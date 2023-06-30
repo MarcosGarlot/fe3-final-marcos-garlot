@@ -31,7 +31,10 @@ const Navbar = () => {
         </li>
       </ul>
       {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
-      <button className='theme-button' onClick={handleClick}>Change theme</button>
+      <img
+          src={`./${theme ? 'dark' : 'light'}.png`} alt="fav_icon" 
+          onClick={handleClick}
+      />
     </nav>
   )
 }

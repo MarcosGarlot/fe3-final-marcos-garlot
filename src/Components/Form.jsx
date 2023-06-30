@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
+import { useTheme } from './utils/global.context';
+
+
 
 
 const Form = () => {
+  const { theme } = useTheme();
   //Aqui deberan implementar el form completo con sus validaciones
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -23,7 +27,7 @@ const Form = () => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit} className='contact-form'>
+      <form onSubmit={handleSubmit} className= {`${theme} contact-form`}>
       <label>
           Nombre completo:
           <input type="text" value={name} onChange={(e) => setName(e.target.value)} />

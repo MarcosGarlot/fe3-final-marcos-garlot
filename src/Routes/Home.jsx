@@ -20,7 +20,7 @@ const Home = () => {
 
 
   return (
-    <main className={`home ${theme}`} >
+    <main className={` ${theme} route`} >
       <h1>Home</h1>
       <div className='card-grid'>
         {/* Aqui deberias renderizar las cards */}
